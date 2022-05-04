@@ -20,7 +20,7 @@ public class List {
                 myWriter.write("</head?> \n");
                 myWriter.write("<body> \n");
                 myWriter.write("<p style=\"text-align:center;\"> \n");
-                myWriter.write("<a  href = \"/home/worldofdustcomic/pages/" + namePlus + ".png \"> \n");
+                myWriter.write("<a  href = \"/home/worldofdustcomic/pages/" + namePlus + ".html \"> \n");
                 myWriter.write("<img src=\"/home/worldofdustcomic/img/" + name + ".png\" width=\"468\" height=\"624\"> \n");
                 myWriter.write("</a> \n");
                 myWriter.write("</p> \n");
