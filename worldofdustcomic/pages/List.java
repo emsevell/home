@@ -31,6 +31,11 @@ public class List {
                 myWriter.write("<a href=\"/home/worldofdustcomic/pages/" + namePlus + ".html\"> Next </a> \n");
                 myWriter.write("<a href=\"/home/worldofdustcomic/pages/last.html\"> Latest </a> \n");
                 myWriter.write("</p> \n");
+                myWriter.write("<p style=\"text-align:center;\">\n");
+                myWriter.write("<a href=\"/home/index.html\"> \n");
+                myWriter.write("Back to Index \n");
+                myWriter.write("</a>\n");
+                myWriter.write("</p>\n");
                 myWriter.write("</body> \n");
                 myWriter.write("</html>");
                 myWriter.close();
