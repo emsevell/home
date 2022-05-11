@@ -25,11 +25,11 @@ public class List {
                 myWriter.write("</a> \n");
                 myWriter.write("</p> \n");
                 myWriter.write("<p style=\"text-align:center;\"> \n");
-                myWriter.write("<a href=\"/home/northwestacademy/pages/0000.html\"> -First- </a> \n");
-                myWriter.write("<a href=\"/home/northwestacademy/pages/" + nameMinus + ".html\"> -Previous- </a> \n");
+                myWriter.write("<a href=\"/home/northwestacademy/pages/0000.html\"> First </a> | \n");
+                myWriter.write("<a href=\"/home/northwestacademy/pages/" + nameMinus + ".html\"> Previous </a> \n");
                 myWriter.write("|<a href=\"/home/northwestacademy/archive.html\"> Archive </a> | \n");
-                myWriter.write("<a href=\"/home/northwestacademy/pages/" + namePlus + ".html\"> -Next- </a> \n");
-                myWriter.write("<a href=\"/home/northwestacademy/pages/last.html\"> -Latest- </a> \n");
+                myWriter.write("<a href=\"/home/northwestacademy/pages/" + namePlus + ".html\"> Next | </a> \n");
+                myWriter.write("<a href=\"/home/northwestacademy/pages/last.html\"> Latest </a> \n");
                 myWriter.write("</p> \n");
                 myWriter.write("<p style=\"text-align:center;\">\n");
                 myWriter.write("<a href=\"/home/index.html\"> \n");
