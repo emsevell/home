@@ -1,10 +1,24 @@
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 public class List {
     public static void main(String[] args) {
-    final int pageNumber = 5;
+        final int pageNumber = 5;
+        String[] c = new String[pageNumber];
+        try {
+            File captions = new File("captions.txt");
+            Scanner myReader = new Scanner(captions);
+            int z = 0;
+            while (myReader.hasNextLine()) {
+                String data = myReader.nextLine();
+                c[z] = data;
+                z++;
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         for (int i = 1;i<pageNumber;i++) {
             String name = fileName(i);
             String namePlus = fileName(i+1);
@@ -21,9 +35,12 @@ public class List {
                 myWriter.write("<body> \n");
                 myWriter.write("<p style=\"text-align:center;\"> \n");
                 myWriter.write("<a  href = \"/home/northwestacademy/pages/" + namePlus + ".html \"> \n");
-                myWriter.write("<img src=\"/home/northwestacademy/img/" + name + ".png\" width=\"468\" height=\"624\"> \n");
+                myWriter.write("<img src=\"/home/northwestacademy/img/" + name + ".png\" width=\"800\" height=\"538\"> \n");
                 myWriter.write("</a> \n");
                 myWriter.write("</p> \n");
+                myWriter.write("<p style=\"text-align:center;\">\n");
+                myWriter.write(c[i] + "\n");
+                myWriter.write("</p>\n");
                 myWriter.write("<p style=\"text-align:center;\"> \n");
                 myWriter.write("<a href=\"/home/northwestacademy/pages/0000.html\"> First </a> | \n");
                 myWriter.write("<a href=\"/home/northwestacademy/pages/" + nameMinus + ".html\"> Previous </a> \n");
