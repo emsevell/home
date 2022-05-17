@@ -53,6 +53,10 @@ public class List {
                 myWriter.write("Back to Index \n");
                 myWriter.write("</a>\n");
                 myWriter.write("</p>\n");
+                myWriter.write("<p> </p> \n");
+                myWriter.write("<p style=\"text-align:center;\">\n");
+                myWriter.write("This is a fan-comic of Dan and Mab's Furry Adventures by Amber. Go read it <a href=\"missmab.com\">here</a>. \n");
+                myWriter.write("</p>\n");
                 myWriter.write("</body> \n");
                 myWriter.write("</html>");
                 myWriter.close();
