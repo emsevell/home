@@ -35,7 +35,7 @@ public class List {
                 myWriter.write("<body> \n");
                 myWriter.write("<p style=\"text-align:center;\"> \n");
                 myWriter.write("<a  href = \"/home/northwestacademy/pages/" + namePlus + ".html \"> \n");
-                myWriter.write("<img src=\"/home/northwestacademy/img/" + name + ".png\" width=\"800\" height=\"538\"> \n");
+                myWriter.write("<img style=\"border:5px solid black;\" src=\"/home/northwestacademy/img/" + name + ".png\" width=\"800\" height=\"538\"> \n");
                 myWriter.write("</a> \n");
                 myWriter.write("</p> \n");
                 myWriter.write("<p style=\"text-align:center;\">\n");
