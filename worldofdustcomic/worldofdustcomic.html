@@ -1,0 +1,122 @@
+<!DOCTYPE html> 
+<html>
+
+ <head>
+  <link rel="stylesheet" href="stylesheet.css">
+ </head>
+
+ <body>
+  <div id="pagedisplay">
+   <p> 
+    <div class="buttoncontainer" id="buttonsabove"> 
+     <input class="b" type="image" src="assets/back2.png" id="back2" onclick="firstPage()">
+     <input class="b" type="image" src="assets/back1.png" id="back1" onclick="prevPage()">
+     <input class="b" type="image" src="assets/archive.png" id="archive" onclick="showArchive()">
+     <input class="b" type="image" src="assets/forwards1.png" id="forwards1" onclick="nextPage()">
+     <input class="b" type="image" src="assets/forwards2.png" id="forwards2" onclick="lastPage()">
+    </div>
+   </p>
+
+   <p>
+		
+    <div id="imgdiv" class="imgcontainer">
+     <input type="image" src="pages/0.png" id="img" style="width:100%;" onclick="nextPage()">
+     <!--img src="pages/1.png" id="img" style="width:100%"-->
+    </div>
+
+   </p>
+
+   <p> 
+    <div class="buttoncontainer" id="buttonsbelow">
+     <input class="b" type="image" src="assets/back2.png" id="back2" onclick="firstPage()">
+     <input class="b" type="image" src="assets/back1.png" id="back1" onclick="prevPage()">
+     <input class="b" type="image" src="assets/archive.png" id="archive" onclick="showArchive()">
+     <input class="b" type="image" src="assets/forwards1.png" id="forwards1" onclick="nextPage()">
+     <input class="b" type="image" src="assets/forwards2.png" id="forwards2" onclick="lastPage()">
+    </div>
+   </p>
+  </div>
+
+  <div id="archivedisplay"> 
+
+  </div>
+
+
+  <script>
+
+   var img = document.getElementById("img");
+   var pagediv = document.getElementById("pagedisplay");
+   var archivediv = document.getElementById("archivedisplay");
+   archivediv.setAttribute("style", "display:none");
+
+   var page = 0;
+   const last = 109;
+
+   var div = document.createElement("div");
+   div.setAttribute("class", "archivecontainer");
+
+   const fs = require('fs');
+   var filedata;
+   fs.readFile('File.txt', 'utf-8', (err, data) => {
+    if (err) throw err;
+    filedata = data;
+   });
+
+   for (let i = 0; i <= last; i++) {
+    var img1 = document.createElement("input");
+    img1.setAttribute("type", "image");
+    img1.setAttribute("class", "archivelink");
+    img1.setAttribute("onclick", "changePage(" + i + ")");
+    img1.setAttribute("src", "pages/" + i + ".png");
+    div.appendChild(img1);
+    if (i%5 == 0 || i==last) {
+     archivediv.appendChild(div);
+     div = document.createElement("div");
+     div.setAttribute("class", "archivecontainer");
+    }
+   }
+
+   function showArchive() {
+    pagediv.setAttribute("style", "display:none");
+    archivediv.removeAttribute("style");
+   }
+
+   function changePage(newpage) {
+    page=newpage;
+    pagediv.removeAttribute("style");
+    archivediv.setAttribute("style", "display:none");
+    setPage();
+   }
+
+   function setPage() {
+    img.setAttribute("src", "pages/" + page + ".png");
+   }
+
+   function nextPage() {
+    if (page<last) {
+     page++;
+    }
+    setPage();
+   }
+
+   function prevPage() {
+    if (page>0) {
+     page--;
+    }
+    setPage();
+   }
+
+   function firstPage() {
+    page=0;
+    setPage();
+   }
+
+   function lastPage() {
+    page=last;
+    setPage();
+   }
+
+  </script>
+ </body>
+</html>
+
