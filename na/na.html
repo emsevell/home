@@ -27,7 +27,6 @@
    </p>
 
    <p id="comment" class="comment">
-	placeholder text
    </p>
 
    <p> 
@@ -76,6 +75,7 @@
      "Irresponsibility will travel halfway around the world while maturity is looking for his shirt.",
      "Priorities."
     ];
+   comment.innerHTML = filedata[0];
 
     
 
@@ -110,7 +110,7 @@
    function setPage() {
     img.setAttribute("src", "pages/" + page + ".png");
     comment.innerHTML = filedata[page];
-    console.log(filedata[page]);
+    // console.log(filedata[page]);
    }
 
    function nextPage() {
