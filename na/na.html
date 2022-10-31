@@ -26,7 +26,7 @@
 
    </p>
 
-   <p id="comment" class="comment" style="text-align:center">
+   <p id="comment" class="comment">
 
    </p>
 
@@ -61,12 +61,21 @@
    var div = document.createElement("div");
    div.setAttribute("class", "archivecontainer");
 
-   const fs = require('fs');
+   /*const fs = require('fs');
    var filedata;
    fs.readFile('File.txt', 'utf-8', (err, data) => {
     if (err) throw err;
     filedata = data.split("\n");
-   });
+   });*/
+
+    var filedata = [
+     "Gravity: 4, Potatoes: 3",
+     "A real heartbreaker",
+     "Please keep all non-redundant extremities inside the cart at all times.",
+     "Subtlety, thy name is Cammy.",
+     "Irresponsibility will travel halfway around the world while maturity is looking for his shirt.",
+     "Priorities."
+    ];
 
     
 
@@ -130,4 +139,3 @@
   </script>
  </body>
 </html>
-
