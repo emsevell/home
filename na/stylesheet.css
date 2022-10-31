@@ -19,11 +19,12 @@ body {
     opacity: 0.75;
     font-style: italic;
     text-align: center;
+    text-size: 2rem;
 }
 
 .imgcontainer {
 	margin: auto;
-	width: 70rem;
+	width: 60rem;
 	border: 3px solid black;
     box-shadow: 5px 5px 5px lightgray;
 }
