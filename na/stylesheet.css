@@ -16,10 +16,10 @@ body {
 }
 
 .comment {
-    opacity: 0.75;
+    opacity: 0.8;
     font-style: italic;
     text-align: center;
-    text-size: 2rem;
+    text-size: 4rem;
 }
 
 .imgcontainer {
