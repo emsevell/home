@@ -27,7 +27,7 @@
    </p>
 
    <p id="comment" class="comment">
-
+	placeholder text
    </p>
 
    <p> 
@@ -110,6 +110,7 @@
    function setPage() {
     img.setAttribute("src", "pages/" + page + ".png");
     comment.innerHTML = filedata[page];
+    console.log(filedata[page]);
    }
 
    function nextPage() {
