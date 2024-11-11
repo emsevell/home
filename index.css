@@ -1,0 +1,189 @@
+head {
+	background-color: white;
+}
+
+
+body {
+	background-color: midnightblue;
+	margin: 0;
+	padding: 0;
+	font-family: "Courier", monospace;
+	font-weight: bold;
+}
+
+#headdiv {
+	position: relative;
+	background-color: white;
+	color: white;
+	background-image: linear-gradient(midnightblue, blue);
+	height: 13rem;
+	text-align: center;
+	width: 100%;
+	float: left;
+	margin: 0;
+	padding: 0;
+	z-index: -2;
+}
+
+h1 {
+	line-height: 10rem;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+/* content labels */
+
+.tab {
+	position: absolute;
+	height: 3rem;
+	width: 5rem;
+	text-align: center;
+	line-height: 2.5rem;
+	padding: 0 0.5rem;
+	background-color: midnightblue;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	z-index: -1;
+	top: -3rem;
+	color: white;
+	border-top: 2px solid white;
+	border-left: 2px solid white;
+	border-right: 2px solid white;
+}
+
+#abouttab {
+	left: 5%;
+}
+
+#comicstab {
+	left: 25%;
+}
+
+#gamestab {
+	left: 45%;
+}
+
+#arttab {
+	left: 65%;
+}
+
+#linkstab {
+	left: 85%;
+}
+
+/* content */
+
+#content {
+	border-top: 2px solid white;
+	position: relative;
+/*	background-color: white;*/
+	height: 100rem;
+	width: 100%;
+	text-align: center;
+	float: left;
+	margin: 0;
+	padding: 0;
+	box-shadow: 0px 0px 2rem 3px black;
+	background-color: midnightblue;
+	color: white;
+}
+
+.wrapper {
+	width: 100%;
+	position: absolute;
+}
+
+.content {
+	position: relative;
+	display: none;
+	z-index: 2;
+}
+
+/* table */
+#log {
+	border-collapse: collapse;
+	border: 2px solid black;
+	background-color: white;
+	color: black;
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#logtitle {
+	font-size: 2rem;
+	font-weight: bold;
+}
+
+#log th, #log td {
+	border: 2px solid black;
+}
+
+#log td {
+	padding: 0.75rem;
+}
+
+.contenttitle {
+	font-size: 4rem;
+	font-weight: 900;
+	height: 8rem;
+}
+
+.thumbnail {
+	height: 15rem;
+}
+
+/* content table */
+.contenttable {
+	border-collapse: collapse;
+	border: none;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contenttabletext {
+	text-align: left;
+	padding-left: 2rem;
+}
+
+.thumbnailcontainer {
+	width: 15rem;
+	text-align: right;
+	padding-right: 2rem;
+}
+
+.itemheader {
+	font-size: 2.5rem;
+	font-weight: 800;
+}
+
+.itembody {
+	font-size: 1rem;
+}
+
+a {
+	color: white;
+}
+
+.contenttable td {
+	padding-bottom: 2rem;
+}
+
+.imagediv {
+	display: inline-block;
+	width: 10rem;
+	padding: 2rem;
+}
+
+.imagediv img {
+	width: 10rem;
+}
+
+.link {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	font-size: 1rem;
+}
