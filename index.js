@@ -9,6 +9,10 @@ var tableEntries = [
 	{
 		date: "11/11/2024",
 		text: "Been very busy, but finally came back to this. Hopefully there'll be time to get the links up and this pushed out before too long - although, that's what I said last time."
+	}, 
+	{
+		date: "12/15/2024",
+		text: "Added a section for Deadlands."
 	}
 ];
 
