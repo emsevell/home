@@ -1,0 +1,44 @@
+body {
+	background-color: white;
+}
+
+.buttoncontainer {
+	width: 35rem;
+	display: flex;
+	margin: 0 auto;
+	/*border: 2px solid white;*/
+}
+
+.b {
+	display:block;
+	height: 4rem;
+	margin: 0 auto;
+}
+
+.comment {
+    opacity: 0.8;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+    text-size: 4rem;
+}
+
+.imgcontainer {
+	margin: auto;
+	width: 60rem;
+	border: 3px solid black;
+    box-shadow: 5px 5px 5px lightgray;
+}
+
+.archivelink {
+    display:inline;
+    width: 15%;
+    margin: 0 auto;
+}
+
+.archivecontainer {
+    width:80%;
+    display:flex;
+    margin-top: 5rem;
+    margin: 0 auto;
+}
