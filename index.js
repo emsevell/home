@@ -17,13 +17,13 @@ var tableEntries = [
 ];
 
 var photos = [
-	"1.png", 
-	"2.png", 
-	"3.png",
-	"4.png",
-	"5.png",
-	"6.png",
-	"7.png"
+	"kitt.png", 
+	"emma.png", 
+	"david.png",
+	"jake.png",
+	"cameron.png",
+	"michael.png",
+	"bane.png"
 ];
 
 
