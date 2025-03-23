@@ -174,13 +174,45 @@ a {
 
 .imagediv {
 	display: inline-block;
+	vertical-align: top;
 	width: 10rem;
 	padding: 2rem;
 }
 
 .imagediv img {
 	width: 10rem;
+	cursor: pointer;
+	display: inline-block;
+	vertical-align: top;
 }
+
+.imagediv div {
+	display: none;
+	vertical-align: top;
+	width: 50%;
+}
+
+.imagediv p {
+	width: 100%;
+	margin: 2rem;
+	display: block;
+	
+}
+
+.phototitle {
+	text-align: center;
+	font-size: 2rem;
+}
+
+.phototext {
+	text-align: left;
+	font-size: 1.5rem;
+}
+
+.imagediv img:hover {
+	width: 12rem;
+}
+
 
 .link {
 	padding-top: 2rem;
