@@ -49,43 +49,57 @@
    var archivediv = document.getElementById("archivedisplay");
    archivediv.setAttribute("style", "display:none");
 
-   var page = 0;
+
+	// get current page, which should be passed into the link
+	var urlParams = new URL(window.location.href).searchParams;
+	var page;
+
+	if (urlParams.has('page')) {
+		page = parseInt(urlParams.get('page'));
+	} else {
+		page = 0;
+	}
+
+	console.log(page);
+
+
    const last = 121;
 
    var div = document.createElement("div");
    div.setAttribute("class", "archivecontainer");
 
-   // const fs = require('fs');
-   // var filedata;
-   //fs.readFile('File.txt', 'utf-8', (err, data) => {
-    //if (err) throw err;
-    //filedata = data;
-   //});
 
-   for (let i = 0; i <= last; i++) {
-    var img1 = document.createElement("input");
-    img1.setAttribute("type", "image");
-    img1.setAttribute("class", "archivelink");
-    img1.setAttribute("onclick", "changePage(" + i + ")");
-    img1.setAttribute("src", "pages/" + i + ".png");
-    div.appendChild(img1);
-    if (i%5 == 0 || i==last) {
-     archivediv.appendChild(div);
-     div = document.createElement("div");
-     div.setAttribute("class", "archivecontainer");
-    }
-   }
+	// this needs to be run ONLY IF it's the archive page. 
+	if (page < 0) {
+	   for (let i = 0; i <= last; i++) {
+		var img1 = document.createElement("input");
+		img1.setAttribute("type", "image");
+		img1.setAttribute("class", "archivelink");
+		img1.setAttribute("onclick", "switchPage(" + i + ", 0)");
+		img1.setAttribute("src", "pages/" + i + ".png");
+		div.appendChild(img1);
+		if (i%5 == 0 || i==last) {
+		 archivediv.appendChild(div);
+		 div = document.createElement("div");
+		 div.setAttribute("class", "archivecontainer");
+		}
+	   }
+		pagediv.setAttribute("style", "display:none");
+    	archivediv.removeAttribute("style");
+	} else {
+		img.setAttribute("src", "pages/" + page + ".png");
+		pagediv.removeAttribute("style");
+		archivediv.setAttribute("style", "display:none");
+	}
+
+	function switchPage(p) {
+		var bareURL = window.location.href.split(/[?#]/)[0];
+		if (!p) p = 0;
+		window.location.href = (bareURL + "?page=" + p);
+	}
 
    function showArchive() {
-    pagediv.setAttribute("style", "display:none");
-    archivediv.removeAttribute("style");
-   }
-
-   function changePage(newpage) {
-    page=newpage;
-    pagediv.removeAttribute("style");
-    archivediv.setAttribute("style", "display:none");
-    setPage();
+		switchPage(-1);
    }
 
    function setPage() {
@@ -93,33 +107,29 @@
    }
 
    function nextPage() {
-    if (page<last) {
-     page++;
+	console.log("nextPage");
+    if (page < last) {
+     switchPage(page + 1);
     }
-    setPage();
    }
 
    function prevPage() {
-    if (page>0) {
-     page--;
+    if (page > 0) {
+      switchPage(page - 1);
     }
-    setPage();
    }
 
    function firstPage() {
-    page=0;
-    setPage();
+    switchPage(0);
    }
 
    function lastPage() {
-    page=last;
-    setPage();
+    switchPage(last);
    }
 
   </script>
  </body>
 </html>
-
 
 
 
